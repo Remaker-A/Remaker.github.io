@@ -17,7 +17,9 @@
     "e2e:headed": "playwright test --headed",
     "e2e:report": "playwright show-report",
     "build:gh": "vite build --base=/ui-prototype/",
+    "build:gh:user": "vite build --base=/",
     "deploy:gh": "npm run build:gh && gh-pages -d dist -f",
+    "deploy:gh:user": "npm run build:gh:user && gh-pages -d dist -f -b gh-pages",
     "deploy:vercel": "vite build && npx vercel deploy --prebuilt --yes --prod"
   },
   "dependencies": {

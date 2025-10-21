@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  unit-tests:
+    name: Unit Tests (Vitest)
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+        working-directory: development/ui-prototype
+      - name: Run unit tests
+        run: npm run test -- -r verbose
+        working-directory: development/ui-prototype
+
+  e2e-tests:
+    name: E2E Tests (Playwright)
+    needs: unit-tests
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+        working-directory: development/ui-prototype
+      - name: Install Playwright Browsers (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: npx playwright install --with-deps
+        working-directory: development/ui-prototype
+      - name: Install Playwright Browsers (Windows)
+        if: matrix.os == 'windows-latest'
+        run: npx playwright install
+        working-directory: development/ui-prototype
+      - name: Run Playwright tests (headless)
+        run: npx playwright test --reporter=dot,line
+        working-directory: development/ui-prototype
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.os }}
+          path: development/ui-prototype/playwright-report
+          retention-days: 7
+      - name: Upload Playwright test-results (traces & screenshots)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results-${{ matrix.os }}
+          path: development/ui-prototype/test-results
+          retention-days: 7

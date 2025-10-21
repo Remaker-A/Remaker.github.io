@@ -1,0 +1,17 @@
+{
+  "fusion_weights": { "mood": 0.60, "taste": 0.40 },
+  "effervescence_boost_factor": 0.10,
+  "template_catalog": [
+    { "id": "sour", "method": "shake", "default_glass": "coupe" },
+    { "id": "highball", "method": "build", "default_glass": "highball" },
+    { "id": "collins", "method": "build", "default_glass": "collins" }
+  ],
+  "templates": {
+    "Sour": { "method": "shake", "glass": "coupe" },
+    "OldFashioned": { "method": "stir", "glass": "rocks" },
+    "Highball": { "method": "build", "glass": "highball" }
+  },
+  "naming": {
+    "templates": ["{moodHint} {templateName}", "{moodHint}之{templateName}"]
+  }
+}

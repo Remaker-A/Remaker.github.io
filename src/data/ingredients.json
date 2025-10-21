@@ -1,0 +1,23 @@
+{
+  "ingredients": [
+    { "name": "Vodka", "category": "spirit", "abv": 40, "flavors": { "body": 0.6, "aroma": 0.3 } },
+    { "name": "Gin", "category": "spirit", "abv": 40, "flavors": { "aroma": 0.7, "body": 0.6, "fruit": 0.3 } },
+    { "name": "Rum", "category": "spirit", "abv": 40, "flavors": { "sweet": 0.4, "aroma": 0.5, "body": 0.6 } },
+    { "name": "Tequila", "category": "spirit", "abv": 40, "flavors": { "aroma": 0.6, "spicy": 0.4, "body": 0.6 } },
+    { "name": "Whiskey", "category": "spirit", "abv": 40, "flavors": { "aroma": 0.6, "body": 0.7, "bitter": 0.2 } },
+
+    { "name": "Lime Juice", "category": "juice", "abv": 0, "flavors": { "sour": 0.8, "fruit": 0.4 } },
+    { "name": "Lemon Juice", "category": "juice", "abv": 0, "flavors": { "sour": 0.8, "fruit": 0.3 } },
+
+    { "name": "Simple Syrup", "category": "syrup", "abv": 0, "flavors": { "sweet": 0.9 } },
+    { "name": "Honey Syrup", "category": "syrup", "abv": 0, "flavors": { "sweet": 0.8, "aroma": 0.2 } },
+
+    { "name": "Soda Water", "category": "soft", "abv": 0, "flavors": { "body": 0.2, "spicy": 0.5 } },
+    { "name": "Tonic Water", "category": "mixer", "abv": 0, "flavors": { "sweet": 0.1, "bitter": 0.25, "spicy": 0.4, "aroma": 0.2, "body": 0.2 } },
+    { "name": "Ginger Ale", "category": "mixer", "abv": 0, "flavors": { "sweet": 0.5, "spicy": 0.6, "aroma": 0.3, "fruit": 0.1, "body": 0.3 } },
+    { "name": "Cola", "category": "mixer", "abv": 0, "flavors": { "sweet": 0.7, "bitter": 0.1, "spicy": 0.2, "aroma": 0.2, "body": 0.4 } },
+    { "name": "Seedlip Garden 108", "category": "na_base", "abv": 0, "flavors": { "sweet": 0.1, "sour": 0.0, "bitter": 0.2, "fruit": 0.2, "spicy": 0.1, "aroma": 0.7, "body": 0.5 } },
+    { "name": "Lyre's Dry London", "category": "na_base", "abv": 0, "flavors": { "sweet": 0.1, "sour": 0.0, "bitter": 0.2, "fruit": 0.2, "spicy": 0.1, "aroma": 0.6, "body": 0.6 } },
+    { "name": "Everleaf Forest", "category": "na_base", "abv": 0, "flavors": { "sweet": 0.2, "sour": 0.0, "bitter": 0.2, "fruit": 0.3, "spicy": 0.1, "aroma": 0.7, "body": 0.5 } }
+  ]
+}

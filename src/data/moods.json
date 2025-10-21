@@ -1,0 +1,81 @@
+{
+  "profiles": [
+    {
+      "key": "happy",
+      "displayName": "开心",
+      "targetFlavorBias": { "sweet": 0.6, "sour": 0.4, "fruit": 0.6, "aroma": 0.5, "spicy": 0.2, "bitter": 0.2, "body": 0.4 },
+      "methodBias": ["shake"],
+      "glassCandidates": ["coupe"],
+      "baseCandidates": ["Vodka", "Gin", "Rum"],
+      "templateCandidates": ["Sour", "Highball"],
+      "abvPreference": { "target": 12, "range": [8, 16] },
+      "namingHints": ["阳光", "微笑"]
+    },
+    {
+      "key": "sad",
+      "displayName": "低落",
+      "targetFlavorBias": { "sweet": 0.3, "sour": 0.3, "bitter": 0.4, "aroma": 0.5, "fruit": 0.3, "spicy": 0.1, "body": 0.5 },
+      "methodBias": ["stir"],
+      "glassCandidates": ["rocks"],
+      "baseCandidates": ["Whiskey", "Rum"],
+      "templateCandidates": ["OldFashioned"],
+      "abvPreference": { "target": 18, "range": [14, 24] },
+      "namingHints": ["夜色", "呢喃"]
+    },
+    {
+      "key": "nervous",
+      "displayName": "紧张",
+      "targetFlavorBias": { "sweet": 0.4, "sour": 0.5, "bitter": 0.2, "aroma": 0.5, "fruit": 0.4, "spicy": 0.2, "body": 0.4 },
+      "methodBias": ["shake"],
+      "glassCandidates": ["highball"],
+      "baseCandidates": ["Vodka", "Gin"],
+      "templateCandidates": ["Highball", "Sour"],
+      "abvPreference": { "target": 10, "range": [6, 14] },
+      "namingHints": ["清风", "轻盈"]
+    },
+    {
+      "key": "romantic",
+      "displayName": "浪漫",
+      "targetFlavorBias": { "sweet": 0.5, "sour": 0.4, "bitter": 0.2, "aroma": 0.6, "fruit": 0.6, "spicy": 0.2, "body": 0.5 },
+      "methodBias": ["shake"],
+      "glassCandidates": ["coupe"],
+      "baseCandidates": ["Gin", "Vodka"],
+      "templateCandidates": ["Sour"],
+      "abvPreference": { "target": 12, "range": [8, 16] },
+      "namingHints": ["玫瑰", "心动"]
+    },
+    {
+      "key": "celebrate",
+      "displayName": "庆祝",
+      "targetFlavorBias": { "sweet": 0.6, "sour": 0.4, "bitter": 0.2, "aroma": 0.5, "fruit": 0.5, "spicy": 0.2, "body": 0.5 },
+      "methodBias": ["shake"],
+      "glassCandidates": ["coupe", "flute"],
+      "baseCandidates": ["Rum", "Vodka", "Gin"],
+      "templateCandidates": ["Sour", "Highball"],
+      "abvPreference": { "target": 14, "range": [10, 18] },
+      "namingHints": ["金色", "烟花"]
+    },
+    {
+      "key": "relax",
+      "displayName": "放松",
+      "targetFlavorBias": { "sweet": 0.4, "sour": 0.3, "bitter": 0.2, "aroma": 0.6, "fruit": 0.4, "spicy": 0.2, "body": 0.5 },
+      "methodBias": ["stir"],
+      "glassCandidates": ["rocks"],
+      "baseCandidates": ["Whiskey", "Rum"],
+      "templateCandidates": ["OldFashioned", "Highball"],
+      "abvPreference": { "target": 12, "range": [8, 16] },
+      "namingHints": ["松弛", "海风"]
+    },
+    {
+      "key": "nostalgia",
+      "displayName": "怀旧",
+      "targetFlavorBias": { "sweet": 0.4, "sour": 0.3, "bitter": 0.4, "aroma": 0.6, "fruit": 0.3, "spicy": 0.2, "body": 0.6 },
+      "methodBias": ["stir"],
+      "glassCandidates": ["rocks"],
+      "baseCandidates": ["Whiskey", "Rum"],
+      "templateCandidates": ["OldFashioned"],
+      "abvPreference": { "target": 18, "range": [14, 24] },
+      "namingHints": ["旧时光", "回忆"]
+    }
+  ]
+}
